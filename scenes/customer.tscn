@@ -1,19 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnqcjb1a2kegt"]
+[gd_scene load_steps=4 format=3 uid="uid://dkcp2ngkrbaq3"]
 
-[ext_resource type="Script" path="res://scripts/person.gd" id="1_odsmi"]
-[ext_resource type="Texture2D" uid="uid://b0u5esk1d76a7" path="res://blue-circle-png.png" id="2_jxfdd"]
+[ext_resource type="Script" path="res://scripts/person.gd" id="1_v26cq"]
+[ext_resource type="Texture2D" uid="uid://66iy65wj7a5r" path="res://circle-512.png" id="2_282h4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f6ikr"]
 
 [node name="Person" type="Area2D"]
-script = ExtResource("1_odsmi")
+script = ExtResource("1_v26cq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_f6ikr")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-scale = Vector2(0.0221945, 0.0222399)
-texture = ExtResource("2_jxfdd")
+scale = Vector2(0.0391757, 0.0392559)
+texture = ExtResource("2_282h4")
 
 [node name="Label" type="Label" parent="."]
 unique_name_in_owner = true
@@ -35,3 +35,4 @@ vertical_alignment = 1
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="resized" from="Label" to="." method="_on_label_resized"]
