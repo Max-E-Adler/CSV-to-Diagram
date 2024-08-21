@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnqcjb1a2kegt"]
+
+[ext_resource type="Texture2D" uid="uid://66iy65wj7a5r" path="res://circle-512.png" id="1_7upuv"]
+[ext_resource type="Script" path="res://scenes/person.gd" id="1_odsmi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f6ikr"]
+
+[node name="Person" type="Area2D"]
+position = Vector2(212, 108)
+script = ExtResource("1_odsmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f6ikr")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+scale = Vector2(0.0391757, 0.0392559)
+texture = ExtResource("1_7upuv")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -11.5
+offset_right = 91.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "dsadsfsfsdfsdfsdfsdfsdf"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="resized" from="Label" to="." method="_on_label_resized"]
