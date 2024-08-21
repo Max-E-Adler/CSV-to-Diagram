@@ -1,0 +1,13 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bac8yk3hv33t"
+
+[deps]
+
+source_file="res://test files/first test file.csv"
+[params]
+
+compress=true
+delimiter=0
